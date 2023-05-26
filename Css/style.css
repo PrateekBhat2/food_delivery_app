@@ -4,6 +4,10 @@
     padding: 0px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* CSS variables */
 :root{
     --navbar-height: 60px;
@@ -13,7 +17,7 @@
 #navbar{
     display: flex;
     align-items: center;
-    position: relative;
+    position: sticky;
     top: 0px;
     height: 75px;
 }
@@ -126,13 +130,15 @@
 /* Client-section */
 #client-section{
     height: 344px;
+    position: relative;
+    z-index: -1;
 }
 #client-section::before{
     content: "";
     position: absolute;
     background: url("../Img/bg1.jpg") no-repeat center center/cover;
     width: 100%;
-    height: 44%;
+    height: 100%;
     z-index: -1;
     opacity: 0.4;
 }
@@ -149,6 +155,7 @@
 
 #client img{
     height: 120px;
+    z-index: -1;
 }
 
 /* Contact Section */
@@ -219,6 +226,7 @@ footer{
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    font-family: cursive;
 }
 
 .center{
